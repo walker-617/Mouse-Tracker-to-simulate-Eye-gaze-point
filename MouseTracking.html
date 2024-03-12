@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mouse Tracking</title>
+</head>
+
+<body>
+    <div class="parent" id="parent">
+        <canvas id="canvas" class="canvas"></canvas>
+        <div class="grid" id="grid"></div>
+        <div class="coordinates"></div>
+        <div class="text" id="text">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+            industries
+            for previewing layouts and visual mockups.</div>
+        <div class="start" onclick="start()">Start</div>
+        <div class="end" onclick="end()">End</div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        createGrid();
+        const init_ = init();
+        function start() {
+            init_.startMouseTracking();
+        }
+        function end() {
+            init_.endMouseTracking();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mouse Path</title>
+</head>
+<body>
+    <div class="parent" id="parent">
+        <canvas id="canvas" class="canvas"></canvas>
+        <div class="grid" id="grid"></div>
+        <!-- <div class="coordinates"></div> -->
+        <div class="text after" id="text">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+            for previewing layouts and visual mockups.</div>
+        <!-- <div class="start" onclick="start()">Start</div> -->
+        <!-- <div class="end" onclick="end()">End</div> -->
+    </div>
+    <script src="script.js"></script>
+    <script>
+        createGrid();
+        var queryParams = new URLSearchParams(window.location.search);
+        var data = queryParams.get('coordinates');
+        const coordinates=JSON.parse(data)
+        console.log(coordinates);
+        draw(coordinates);
+    </script>
+</body>
+</html>

@@ -44,8 +44,6 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(10, 1fr);
     height: 100%;
     width: 100%;
 }
@@ -59,11 +57,24 @@
     align-items: center;
 }
 
-.grid div[class^="grid-item"]:nth-child(even){
+/* .grid div[class^="grid-item"]:nth-child(3n+1){
     background-color: lightblue;
+} */
+
+.after{
+    opacity: 0.3;
 }
 
-
+.fixation-points{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    z-index: 20;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 .coordinates {
     position: absolute;
@@ -74,4 +85,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+}
+
+.canvas{
+    position: absolute;
+}
+
+.text{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    width: 80%;
+    
 }
